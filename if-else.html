@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" id="inpt">
+        <button onclick="setItem()" id="btn" >tıkla gör</button>
+        <label id="label" for=""></label>
+    <script>
+        const inputEl =document.querySelector("#inpt")
+        const labelEl = document.querySelector("#label")
+
+
+        function setItem(){
+
+            let deger = inputEl.value;
+            if(deger > 500){
+                deger *= 0.9
+            }
+            else if(deger > 300){
+                deger *= 0.93
+
+            }
+            else{
+                deger *= 0.95
+            }
+            labelEl.innerHTML = `indiriminiz = ${deger}`
+
+        }
+
+    </script>
+    
+</body>
+</html>
